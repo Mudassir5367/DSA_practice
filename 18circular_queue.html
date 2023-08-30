@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>circular queue</title>
+  </head>
+  <body>
+    <h1>Circular Queue</h1>
+    <script>
+      class Queue {
+        constructor(size) {
+          this.queueArray = new Array(size);
+          this.currentSize = 0;
+          this.maxSize = size;
+          this.front = -1;
+          this.rear = -1;
+        }
+        enqueue(value) {
+          if (this.currentSize != this.maxSize) {
+            if (this.rear == this.maxSize - 1) {
+              this.rear = 0;
+            } else {
+                this.rear++
+            }
+            this.queueArray[this.rear] = value;
+            this.currentSize++;
+            if (this.front == -1) {
+              this.front = this.rear;
+            }
+          }
+        }
+
+        dequeue(){
+            if(this.currentSize>0){
+                this.queueArray[this.front] = null;
+                if(this.currentSize == this.maxSize-1){
+                    this.front = 0;
+                }else{
+                    this.front++
+                }
+                this.currentSize--;
+            }else{
+                this.front = -1;
+                this.rear = -1;
+            }
+        }
+      }
+      let queue = new Queue(5);
+      // enqueue()
+    </script>
+  </body>
+</html>

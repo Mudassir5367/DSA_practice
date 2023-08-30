@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse Array</title>
+    <script>
+        let arr = [45,12,32,9,0]
+
+        function reverse(arr,start,end){
+            console.warn(arr);
+            if(start<=end){
+                // temp = 45 ajay ga
+            let temp = arr[start];
+            // arr start means arr[45] ki jaga arr[0] end ajay gi
+            arr[start] = arr[end]
+            // so end pe temp means 45 chala jay ga 
+            arr[end] = temp;
+            // ab isy bar bar chalany k liye function ka use krna pry ga so
+            reverse(arr,start+1,end-1)
+            }
+        }
+        reverse(arr,0,arr.length-1)
+
+        // through javascript function
+        // let arr1 = [3,20,9,0]
+        // console.log(arr1);
+        // arr.reverse()
+        // console.log(arr1);
+    </script>
+</head>
+<body>
+    <h1>Reverse Recursion Array</h1>
+</body>
+</html>

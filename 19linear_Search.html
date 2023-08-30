@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linear Search</title>
+    <script>
+        // let arr = [2,43,45,34,6,7,88,5,3,244,12,85,64]
+        // let number = 12;
+        // let position = undefined;
+        // for(let i = 0; i<=arr.length; i++){
+        //     if(arr[i] == number){
+        //         position = i;
+        //         break;
+        //     }
+        // }
+        // console.warn(position);
+        // if(!position){
+        //     alert('Please Enter valid input')
+        // }
+
+        function searching(){
+            let arr = [2,43,45,34,6,7,88,5,3,244,12,85,64]
+        let number = document.getElementById('val').value;
+        let position = undefined;
+        for(let i = 0; i<=arr.length; i++){
+            if(arr[i] == number){
+                position = i;
+                break;
+            }
+        }
+        console.warn(position);
+        if(!position){
+            alert('Please Enter valid input')
+        }
+        }
+    </script>
+</head>
+<body>
+    <h1>Lineaer Search</h1>
+    <input type="text" placeholder="Enter value" id="val">
+    <button onclick="searching()">Searching</button>
+</body>
+</html>

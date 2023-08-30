@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>merge with while</title>
+    <script>
+        let arr1 = [11,12,23,34,5,6,7,8]
+        let arr2 = [10,20,30,40]
+        let arr3 = []
+        let d1 = 0;
+        let d2 = 0;
+        let d3 = 0;
+        while (d1<arr1.length && d2<arr2.length) {
+            if (arr1[d1]<arr2[d2]) {
+                arr3[d3] = arr1[d1];
+                d1++;
+                console.warn(arr3[d3]);
+            } else {
+                arr3[d3] = arr2[d2];
+                d2++;
+                console.warn(arr3[d3]);
+            }
+            d3++;
+        }
+        console.warn(arr3)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

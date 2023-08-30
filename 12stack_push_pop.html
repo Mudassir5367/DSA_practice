@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stach</title>
+    <script>
+        let arr = [];
+        let curruntSize = arr.length;
+        let max = 5;
+        
+        function push(val){
+            if(curruntSize>=max){
+                alert('The stack is full'+val)
+            }else{
+                arr[curruntSize] = val;
+                curruntSize+=1
+            }
+        }
+
+        function pop(){
+            if(curruntSize>0){
+                curruntSize-=1;
+                arr.length = curruntSize;
+            }else{
+                alert('The stack is already empty')
+            }
+        }
+        push(10)
+        push(20)
+        push(30)
+        push(40)
+        push(50)
+        pop()
+        pop()
+        pop()
+        pop()
+        push(60)
+        push(70)
+        push(80)
+        console.warn(arr);
+    </script>
+</head>
+<body>
+    <h1>Stack Data</h1>
+</body>
+</html>

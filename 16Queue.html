@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Queue</title>
+    <script>
+      let queueArray = [];
+      let curruntSize = queueArray.length;
+      maxSize = 5;
+      // push value
+      function enqueue(value) {
+        if (curruntSize >= maxSize) {
+          alert("The Queue is already full");
+        } else {
+          queueArray[curruntSize] = value;
+          curruntSize +=1;
+        }
+      }
+
+
+      function display(){
+          console.warn(queueArray);
+      }
+
+
+      function dequeue() {
+        // aik aik value tak approach krny k liye loop chalain gy
+        if(curruntSize<0){
+            alert('Queue is already empty')
+        }else{
+
+            for (let i = 0; i < queueArray.length; i++) {
+              queueArray[i] = queueArray[i+1];
+            }
+            curruntSize--;
+            queueArray.length = curruntSize;        
+        }
+        }
+
+      
+
+      enqueue(12);
+      enqueue(121);
+      enqueue(121111);
+      display()
+      dequeue()
+      dequeue();
+      display()
+    //   console.warn(queueArray);
+    </script>
+  </head>
+  <body>
+    <h1>Queue Data Structure</h1>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stack String Reverse</title>
+    <script>
+      let arr = [];
+      let curruntSize = arr.length;
+
+      function push(value) {
+        arr[curruntSize] = value;
+        curruntSize++;
+      }
+
+      function pop() {
+        lastIndex = arr[curruntSize-1]
+        curruntSize--;
+        arr.length = curruntSize;
+        return lastIndex;
+      }
+
+      function reverseStr(item) {
+        // array ko push krwain gy to har aik ko push krwany k liye loop chalain gy so
+        for (let i = 0; i < item.length; i++) {
+          push(item[i]);
+        }
+        // so pop krwany k liye stack sy aik aik value ko bhi loop chalain gy
+        for (let i = 0; i < item.length; i++) {
+          // console.warn(pop());
+          item[i] = pop()
+          // pop()
+      }
+    }
+
+      let str = "anar";
+      str = str.split("");
+      reverseStr(str);
+      console.warn(str.join(''));
+      // console.warn(arr);
+    </script>
+  </head>
+  <body>
+    <h1>Stack Reverse String</h1>
+  </body>
+</html>

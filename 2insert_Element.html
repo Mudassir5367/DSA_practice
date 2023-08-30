@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insertion Array</title>
+
+    <script>
+        let arr = [10,20,40,80,50,60,70];
+        // let newEl = 30;
+        // let postion = 2;
+        // console.warn(arr);
+
+        // for(let i = arr.length - 1; i>=0; i--){
+        //     if(i>=postion){
+        //         arr[i+1] = arr[i]
+        //     }
+        //     console.warn(arr);
+        //     if(i == postion){
+        //         arr[i] = newEl;
+        //     }
+        // }
+
+        // steps
+        // firstly write an array 
+        // then make sure position and new element which and where you want to show
+        // then for insertion purpose one procedure is to use loop from end to reach first
+        // then if you want to don't delete others element then make other elemnts move forward
+        // then add up one element to make space 
+        // then compare the postion where you want to show with the loop then assign new element  
+
+            // other is through fucntion and dynamically use of postion and new element
+        function insert(){
+        let arr = [10,20,40,80,50,60,70];
+        let newEl = document.getElementById('newEl').value
+        newEl = parseInt(newEl)
+        let postion = document.getElementById('position').value
+        console.warn(arr);
+        if( postion < 0){
+            alert('Please Enter Valid Input')
+        } 
+
+        for(let i = arr.length - 1; i>=0; i--){
+            if(i>=postion){
+                arr[i+1] = arr[i]
+            }
+            console.warn(arr);
+            if(i == postion){
+                arr[i] = newEl
+            }
+        }
+    }
+
+    // This work done in simple javascript by use of splice
+    
+    // let arr = [10,20,40,80,50,60,70];
+    // arr.splice(3,0,400000)
+    // console.log(arr);
+
+     </script>
+</head>
+<body>
+    <h1>Insertion of Array</h1>
+    <input type="text" id="position" placeholder="Enter Postion">
+    <input type="text" id="newEl" placeholder="Enter new Element">
+    <button onclick="insert()">Insert</button>
+</body>
+</html>

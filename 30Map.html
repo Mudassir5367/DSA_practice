@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map</title>
+    <script defer>
+        let map = new Map([
+            ['name','Mudassir Hussain'],
+            [true,'boo lean'],
+            [100,'hundred']
+        ]) 
+        // console.log(map);
+        // Add data
+        map.set('color','green')        
+        console.log(map);
+        // remove one element
+        map.delete(100,'hundred')
+        console.log(map);
+        console.log(map.size);
+        console.log(map.has(100));
+        console.log(map.get(100));
+        map.clear()
+        console.log(map);
+
+        // for loop
+        for(let x of map){
+            console.log(x);
+            console.log(x[0]);
+            console.log(x[1]);
+        }
+
+        // forEach loop
+        map.forEach((val,key)=>{
+            console.log(val);
+            console.log(key);
+        })
+
+
+
+    </script>
+</head>
+<body>
+    <h1>Map Method in DSA</h1>
+</body>
+</html>

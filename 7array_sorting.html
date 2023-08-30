@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Sorting</title>
+    <script>
+        let arr = [40,30,12,25]
+        // let arr = [40,60,3,44,564,11,23,786];
+        for(let i = 0; i<arr.length;i++){
+            for(let j = 0; j<arr.length; j++){
+                // if(arr[40]>arr[j+1 =>30])
+                if(arr[j]>arr[j+1]){
+                    // temp = arr[j=>40] is ka mtlb ha ham isy temp mein store krwa dein gy
+                    let temp = arr[j];
+                    // so ab 40 ki jaga pe 30 ajay ga arr[j] = arr[j+1] sy
+                    arr[j] = arr[j+1];
+                    // 40 ko next jaga pe shift kr dein gy arr[i+1] = temp sy
+                    arr[j+1] = temp;
+                }
+                console.log(arr);
+            }
+        }
+        console.log(arr);
+    </script>
+</head>
+<body>
+    <h1>Bubble Sorting</h1>
+</body>
+</html>

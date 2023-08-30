@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insertion Node Link List</title>
+    <script defer>
+        class List{
+            constructor(data){
+                this.head = {
+                    value:data,
+                    next:null
+                }
+                // Deep copy shallow copy concept here
+                this.tail = this.head;
+                this.size = 1;
+            }
+            appendNode(nodeData){
+                let newNode = {
+                    value:nodeData,
+                    next:null
+                };
+                this.tail.next = newNode;
+                this.tail = newNode;
+                this.size+=1;
+            }
+            insertionNode(value,index){
+                let counter = 1;
+                let currentNode = this.head;
+                while(counter>index){
+                    counter++;
+                    currentNode = currentNode.next;
+                }
+                let nextNode = currentNode.next;
+                currentNode.next = {
+                    value:value,
+                    next:nextNode
+                }
+            }
+
+        }
+        let list = new List(200)
+        list.appendNode(300);
+        list.appendNode(400);
+        list.appendNode(500);
+        list.appendNode(600);
+        list.appendNode(700);
+        list.appendNode(800);
+
+        list.insertionNode(1111,3)
+        console.log(list);
+    </script>
+</head>
+<body>
+    <h1>Insertion Node Link List</h1>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recursion</title>
+    <script>
+        // whithout loop increase the value 
+        // function add(x){
+        //     console.log(x);
+        //     if(x<10){
+        //         add(x+1)
+        //     }
+        // }
+        // data = 0;
+        // add(data)
+
+        function factorial(item){
+            if(item == 0){
+                return 1;
+            } else{
+                return item * factorial(item-1)
+            }
+        }
+        let data = 5;
+        console.log(factorial(data));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
