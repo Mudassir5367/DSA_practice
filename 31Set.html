@@ -8,21 +8,21 @@
         let set = new Set(['ali','ab','ali'])
         // add data
         set.add({'name':"Mudassir"})
-        // console.log(set);
-        // console.log(set.has('ali'));
+        console.log(set);
+        console.log(set.has('ali'));
         // remove one element
-        // set.delete('ab')
-        // console.log(set);
+        set.delete('ab')
+        console.log(set);
 
         // for loop 
-        // for(let x of set){
-        //     console.log(x);
-        // }
+        for(let x of set){
+            console.log(x);
+        }
 
-        // forEach
-        // set.forEach((val)=>{
-        //     console.log(val);
-        // })
+        forEach
+        set.forEach((val)=>{
+            console.log(val);
+        })
         console.warn(set.values());
         console.warn(set.keys());
         console.warn(set.entries());
