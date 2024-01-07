@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function reverseWords(input) {
+  // Split the input sentence into an array of words
+  const words = input.split(' ');
+
+  // Reverse each word in the array
+  const reversedWords = words.map(word => reverseString(word));
+
+  // Join the reversed words back into a sentence
+  const result = reversedWords.join(' ');
+
+  return result;
+}
+
+// Helper function to reverse a string
+function reverseString(str) {
+  return str.split('').reverse().join('');
+}
+
+// Example usage:
+const input1 = 'helo';
+const input2 = 'will you marry me';
+
+console.log(reverseWords(input1)); // Output: oleh
+console.log(reverseWords(input2)); // Output: em uoy yrram
+
+    </script>
+</body>
+</html>
